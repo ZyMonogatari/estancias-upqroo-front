@@ -1,0 +1,109 @@
+<ion-view view-title="Cedula de Registro">
+  <ion-content>
+    <div class="content-form ">
+	<div class="list background-container">
+		<div class="item item-divider item-dark2">Estancia</div> <!-- Numero de estancia-->
+		<label class="item item-input item-select item-dark">
+		   <div class="input-label white">
+			    Estancia
+		    </div>
+		    <select ng-model="parametros.estancia">
+		      <option selected>Uno</option>
+		      <option>Dos</option>
+		    </select>
+		</label>
+		<div class="item item-divider item-dark2">Datos del Proyecto</div> <!-- Datos del proyecto-->
+		<label class="item item-input item-floating-label item-dark">
+		    <span class="input-label white">Nombre del Proyecto</span>
+		    <input type="text" placeholder="Nombre del Proyecto" ng-model="params.projectName">
+		</label>
+		<div class="item item-divider item-dark2">Datos de la Empresa</div> <!-- Datos de la empresa-->
+		<label class="item item-input item-floating-label item-dark">
+		    <span class="input-label white">Nombre</span>
+		    <input type="text" placeholder="Nombre" ng-model="params.enterprice">
+		</label>
+		<!--label class="item item-input item-floating-label item-dark">
+		    <span class="input-label white">Apellido Paterno</span>
+		    <input type="text" placeholder="Apellido Paterno">
+		</label>
+		<label class="item item-input item-floating-label item-dark">
+		    <span class="input-label white">Apellido Materno</span>
+		    <input type="text" placeholder="Apellido Materno">
+		</label-->
+		<label class="item item-input item-floating-label item-dark">
+		    <span class="input-label white">Giro</span>
+		    <input type="text" placeholder="Giro" ng-model="params.giro">
+		</label>
+		<label class="item item-input item-floating-label item-dark">
+		    <span class="input-label white">Tipo</span>
+		    <input type="text" placeholder="Tipo" ng-model="params.enterpriceType">
+		</label>
+		<label class="item item-input item-floating-label item-dark">
+		    <span class="input-label white">Dirección</span>
+		    <input type="text" placeholder="Dirección" ng-model="params.addressEnterprice">
+		</label>
+		<label class="item item-input item-floating-label item-dark">
+		    <span class="input-label white">Responsable de Recursos Humanos</span>
+		    <input type="text" placeholder="Responsable de Recursos Humanos" ng-model="params.rrhh">
+		</label>
+		<label class="item item-input item-floating-label item-dark">
+		    <span class="input-label white">Teléfono</span>
+		    <input type="text" placeholder="Teléfono" ng-model="params.rrhhPhone">
+		</label>
+		<label class="item item-input item-floating-label item-dark">
+		    <span class="input-label white">Extensión</span>
+		    <input type="text" placeholder="Extensión" ng-model="params.rrhhExt">
+		</label>
+		<label class="item item-input item-floating-label item-dark">
+		    <span class="input-label white">example@domain.etc</span>
+		    <input type="text" placeholder="example@domain.etc" ng-model="params.rrhhEmail">
+		</label>
+		<div class="item item-divider item-dark2">Datos del Asesor Empresarial</div> <!-- Datos de asesor epresarial-->
+		<label class="item item-input item-floating-label item-dark">
+		    <span class="input-label white">Titulo</span>
+		    <input type="text" placeholder="Titulo" ng-model="params.titleAssesorEnterprice">
+		</label>
+		<label class="item item-input item-floating-label item-dark">
+		    <span class="input-label white">Nombre (s)</span>
+		    <input type="text" placeholder="Nombre (s)" ng-model="asesor.name">
+		</label>
+		<label class="item item-input item-floating-label item-dark">
+		    <span class="input-label white">Apellido Paterno</span>
+		    <input type="text" placeholder="Apellido Paterno" ng-model="asesor.lastName">
+		</label>
+		<label class="item item-input item-floating-label item-dark">
+		    <span class="input-label white">Apellido Materno</span>
+		    <input type="text" placeholder="Apellido Materno" ng-model="asesor.secondLastName">
+		</label>
+		<label class="item item-input item-floating-label item-dark">
+		    <span class="input-label white">Puesto</span>
+		    <input type="text" placeholder="Puesto" ng-model="params.charge">
+		</label>
+		<label class="item item-input item-floating-label item-dark">
+		    <span class="input-label white">Teléfono</span>
+		    <input type="text" placeholder="Teléfono" ng-model="params.phoneAssesorEnterprice">
+		</label>
+		<label class="item item-input item-floating-label item-dark">
+		    <span class="input-label white">Extensión</span>
+		    <input type="text" placeholder="Extensión" ng-model="params.extAssesorEnterprice">
+		</label>
+		<label class="item item-input item-floating-label item-dark">
+		    <span class="input-label white">example@domain.etc</span>
+		    <input type="text" placeholder="example@domain.etc" ng-model="params.emailAssesorEnterprice">
+		</label>
+		<div class="item item-divider item-dark2"> Asesor Académico </div> <!-- Numero de estancia-->
+		<label class="item item-input item-select item-dark">
+		   <div class="input-label white">
+			    Asesor
+		    </div>
+		    <select class="item-dark" ng-model="parametros.selectedTeacher">
+		      <option ng-repeat="teacher in teachers">{{teacher.name}} {{teacher.lastName}}</option>
+		    </select>
+		</label>
+		<button class="button button-block icon icon-right ion-edit button-dark" ng-click="getF04()">
+		  Guardar
+		</button>
+	</div>
+</div>
+  </ion-content>
+</ion-view>

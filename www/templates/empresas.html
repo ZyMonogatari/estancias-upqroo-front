@@ -1,0 +1,13 @@
+<ion-view view-title="Empresas">
+  <ion-content>
+    <ion-list>
+      <ion-item ng-repeat="empresa in empresas" href="#/app/empresas/{{empresa.id}}" ng-click="guardarEmpresa(empresa)">
+        <ion-thumbnail item-start>
+        <img src="{{empresa.img}}">
+        </ion-thumbnail>
+        <h2>{{empresa.nombre}}</h2>
+        <p>{{empresa.info.telefono}}</p>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

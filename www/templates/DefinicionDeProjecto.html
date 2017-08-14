@@ -1,0 +1,305 @@
+<ion-view view-title="Definicion de Projecto">
+  <ion-content>
+      <div class="content-form ">
+	<div class="list background-container">
+		<div class="item item-divider item-dark2">Datos de la empresa</div> <!-- Datos del empresa-->
+		<label class="item item-input item-floating-label item-dark">
+		    <span class="input-label white">Nombre de la empresa</span>
+		    <input type="text" placeholder="Nombre de la empresa" ng-model="params.enterprice">
+		</label>
+		<label class="item item-input item-floating-label item-dark">
+		    <span class="input-label white">Nombre del asesor empresarial</span>
+		    <input type="text" placeholder="Nombre del asesor empresarial" ng-model="params.assesorName">
+		</label>
+		<label class="item item-input item-floating-label item-dark ">
+		    <span class="input-label white">Puesto</span>
+		    <input type="text" placeholder="Puesto" ng-model="params.charge">
+		</label>
+		<div class="item item-divider item-dark2"> Asesor Académico </div> <!-- Asesor estancias-->
+		<label class="item item-input item-select item-dark">
+		   <div class="input-label white">
+			    Asesor
+		    </div>
+		    <select class="item-dark" ng-model="params.teacherName">
+		      <option ng-repeat="teacher in teachers">{{teacher.name}} {{teacher.lastName}}</option>
+		    </select>
+		</label>
+		<div class="item item-divider item-dark2">Proyecto</div> <!-- proyecto-->
+		<label class="item item-input item-floating-label item-dark">
+		    <span class="input-label white">Nombre del proyecto</span>
+		    <input type="text" placeholder="Nombre del proyecto" ng-model="params.nameProject">
+		</label>
+		<label class="item item-input item-floating-label item-dark textarea2">
+		    <span class="input-label white">Objetivo del proyecto</span>
+		    <textarea class="item item-dark2 item-text-wrap" maxlength="200" type="text" placeholder="Objetivo del proyecto" rows="3" cols="3" ng-model="params.objetiveProject"></textarea>
+		</label>
+							<!-- Semana -->
+		<div class="item item-divider item-dark2">Semana 1</div> 
+		<label class="item item-input item-floating-label item-dark">
+		    <span class="input-label white">Descripcion de etapa</span>
+		    <input type="text" placeholder="Descripcion de etapa" ng-model="params.descriptionProject1">
+		</label>
+		<label class="item item-input item-dark" >
+		    <span class="input-label white">Inicio de semana:</span>
+		    <input type="date" data-date-format="DD MMMM YYYY" ng-model="semana1.inicio">
+		</label>
+		<label class="item item-input item-dark">
+		    <span class="input-label white">Fin de semana:</span>
+		    <input type="date" ng-model="semana1.fin">
+		</label>
+		<label class="item item-input item-stacked-label item-dark">
+			<span class="input-label white">Horas</span>
+			<form class="item range item-dark noneBorders" action="/action_page.php"
+			  oninput="x.value=parseInt(horas.value)">
+			  <i><output name="x" for="a b"></output></i>
+			  <input type="range"  id="horas" name="horas" min="4" max="40" value="4" ng-model="params.hour1">
+			</form>
+		</label>
+		<label class="item item-input item-floating-label item-dark">
+		    <span class="input-label white"> de competencias</span>
+		    <input type="text" placeholder="Descripción de competencias" ng-model="params.description1">
+		</label>
+							<!-- Semana -->
+		<div class="item item-divider item-dark2">Semana 2</div> 
+		<label class="item item-input item-floating-label item-dark">
+		    <span class="input-label white">Descripcion de etapa</span>
+		    <input type="text" placeholder="Descripcion de etapa" ng-model="params.descriptionProject2">
+		</label>
+		<label class="item item-input item-dark" >
+		    <span class="input-label white">Inicio de semana:</span>
+		    <input type="date" ng-model="semana2.inicio">
+		</label>
+		<label class="item item-input item-dark">
+		    <span class="input-label white">Fin de semana:</span>
+		    <input type="date" ng-model="semana2.fin">
+		</label>
+		<label class="item item-input item-stacked-label item-dark">
+			<span class="input-label white">Horas</span>
+			<form class="item range item-dark noneBorders" action="/action_page.php"
+			  oninput="x.value=parseInt(horas.value)">
+			  <i><output name="x" for="a b"></output></i>
+			  <input type="range"  id="horas" name="horas" min="4" max="40" value="4" ng-model="params.hour2">
+			</form>
+		</label>
+		<label class="item item-input item-floating-label item-dark">
+		    <span class="input-label white">Descripción de competencias</span>
+		    <input type="text" placeholder="Descripción de competencias" ng-model="params.description2">
+		</label>
+		<!-- Semana -->
+		<div class="item item-divider item-dark2">Semana 3</div> 
+		<label class="item item-input item-floating-label item-dark">
+		    <span class="input-label white">Descripcion de etapa</span>
+		    <input type="text" placeholder="Descripcion de etapa" ng-model="params.descriptionProject3">
+		</label>
+		<label class="item item-input item-dark" >
+		    <span class="input-label white">Inicio de semana:</span>
+		    <input type="date" ng-model="semana3.inicio">
+		</label>
+		<label class="item item-input item-dark">
+		    <span class="input-label white">Fin de semana:</span>
+		    <input type="date" ng-model="semana3.fin">
+		</label>
+		<label class="item item-input item-stacked-label item-dark">
+			<span class="input-label white">Horas</span>
+			<form class="item range item-dark noneBorders" action="/action_page.php"
+			  oninput="x.value=parseInt(horas.value)">
+			  <i><output name="x" for="a b"></output></i>
+			  <input type="range"  id="horas" name="horas" min="4" max="40" value="4" ng-model="params.hour3">
+			</form>
+		</label>
+		<label class="item item-input item-floating-label item-dark">
+		    <span class="input-label white">Descripción de competencias</span>
+		    <input type="text" placeholder="Descripción de competencias" ng-model="params.description3">
+		</label>
+		<!-- Semana -->
+		<div class="item item-divider item-dark2">Semana 4</div> 
+		<label class="item item-input item-floating-label item-dark">
+		    <span class="input-label white">Descripcion de etapa</span>
+		    <input type="text" placeholder="Descripcion de etapa" ng-model="params.descriptionProject4">
+		</label>
+		<label class="item item-input item-dark" >
+		    <span class="input-label white">Inicio de semana:</span>
+		    <input type="date" ng-model="semana4.inicio">
+		</label>
+		<label class="item item-input item-dark">
+		    <span class="input-label white">Fin de semana:</span>
+		    <input type="date" ng-model="semana4.fin">
+		</label>
+		<label class="item item-input item-stacked-label item-dark">
+			<span class="input-label white">Horas</span>
+			<form class="item range item-dark noneBorders" action="/action_page.php"
+			  oninput="x.value=parseInt(horas.value)">
+			  <i><output name="x" for="a b"></output></i>
+			  <input type="range"  id="horas" name="horas" min="4" max="40" value="4" ng-model="params.hour4">
+			</form>
+		</label>
+		<label class="item item-input item-floating-label item-dark">
+		    <span class="input-label white">Descripción de competencias</span>
+		    <input type="text" placeholder="Descripción de competencias" ng-model="params.description4">
+		</label>
+		<!-- Semana -->
+		<div class="item item-divider item-dark2">Semana 5</div> 
+		<label class="item item-input item-floating-label item-dark">
+		    <span class="input-label white">Descripcion de etapa</span>
+		    <input type="text" placeholder="Descripcion de etapa" ng-model="params.descriptionProject5">
+		</label>
+		<label class="item item-input item-dark" >
+		    <span class="input-label white">Inicio de semana:</span>
+		    <input type="date" ng-model="semana5.inicio">
+		</label>
+		<label class="item item-input item-dark">
+		    <span class="input-label white">Fin de semana:</span>
+		    <input type="date" ng-model="semana5.fin">
+		</label>
+		<label class="item item-input item-stacked-label item-dark">
+			<span class="input-label white">Horas</span>
+			<form class="item range item-dark noneBorders" action="/action_page.php"
+			  oninput="x.value=parseInt(horas.value)">
+			  <i><output name="x" for="a b"></output></i>
+			  <input type="range"  id="horas" name="horas" min="4" max="40" value="4" ng-model="params.hour5">
+			</form>
+		</label>
+		<label class="item item-input item-floating-label item-dark">
+		    <span class="input-label white">Descripción de competencias</span>
+		    <input type="text" placeholder="Descripción de competencias" ng-model="params.description5">
+		</label>
+		<!-- Semana -->
+		<div class="item item-divider item-dark2">Semana 6</div> 
+		<label class="item item-input item-floating-label item-dark">
+		    <span class="input-label white">Descripcion de etapa</span>
+		    <input type="text" placeholder="Descripcion de etapa" ng-model="params.descriptionProject6">
+		</label>
+		<label class="item item-input item-dark" >
+		    <span class="input-label white">Inicio de semana:</span>
+		    <input type="date" ng-model="semana6.inicio">
+		</label>
+		<label class="item item-input item-dark">
+		    <span class="input-label white">Fin de semana:</span>
+		    <input type="date" ng-model="semana6.fin">
+		</label>
+		<label class="item item-input item-stacked-label item-dark">
+			<span class="input-label white">Horas</span>
+			<form class="item range item-dark noneBorders" action="/action_page.php"
+			  oninput="x.value=parseInt(horas.value)">
+			  <i><output name="x" for="a b"></output></i>
+			  <input type="range"  id="horas" name="horas" min="4" max="40" value="4" ng-model="params.hour6">
+			</form>
+		</label>
+		<label class="item item-input item-floating-label item-dark">
+		    <span class="input-label white">Descripción de competencias</span>
+		    <input type="text" placeholder="Descripción de competencias" ng-model="params.description6">
+		</label>
+		<!-- Semana -->
+		<div class="item item-divider item-dark2">Semana 7</div> 
+		<label class="item item-input item-floating-label item-dark">
+		    <span class="input-label white">Descripcion de etapa</span>
+		    <input type="text" placeholder="Descripcion de etapa" ng-model="params.descriptionProject7">
+		</label>
+		<label class="item item-input item-dark" >
+		    <span class="input-label white">Inicio de semana:</span>
+		    <input type="date" ng-model="semana7.inicio">
+		</label>
+		<label class="item item-input item-dark">
+		    <span class="input-label white">Fin de semana:</span>
+		    <input type="date" ng-model="semana7.fin">
+		</label>
+		<label class="item item-input item-stacked-label item-dark">
+			<span class="input-label white">Horas</span>
+			<form class="item range item-dark noneBorders" action="/action_page.php"
+			  oninput="x.value=parseInt(horas.value)">
+			  <i><output name="x" for="a b"></output></i>
+			  <input type="range"  id="horas" name="horas" min="4" max="40" value="4" ng-model="params.hour7">
+			</form>
+		</label>
+		<label class="item item-input item-floating-label item-dark">
+		    <span class="input-label white">Descripción de competencias</span>
+		    <input type="text" placeholder="Descripción de competencias" ng-model="params.description7">
+		</label>
+		<!-- Semana -->
+		<div class="item item-divider item-dark2">Semana 8</div> 
+		<label class="item item-input item-floating-label item-dark">
+		    <span class="input-label white">Descripcion de etapa</span>
+		    <input type="text" placeholder="Descripcion de etapa" ng-model="params.descriptionProject8">
+		</label>
+		<label class="item item-input item-dark" >
+		    <span class="input-label white">Inicio de semana:</span>
+		    <input type="date" ng-model="semana8.inicio">
+		</label>
+		<label class="item item-input item-dark">
+		    <span class="input-label white">Fin de semana:</span>
+		    <input type="date" ng-model="semana8.fin">
+		</label>
+		<label class="item item-input item-stacked-label item-dark">
+			<span class="input-label white">Horas</span>
+			<form class="item range item-dark noneBorders" action="/action_page.php"
+			  oninput="x.value=parseInt(horas.value)">
+			  <i><output name="x" for="a b"></output></i>
+			  <input type="range"  id="horas" name="horas" min="4" max="40" value="4" ng-model="params.hour8">
+			</form>
+		</label>
+		<label class="item item-input item-floating-label item-dark">
+		    <span class="input-label white">Descripción de competencias</span>
+		    <input type="text" placeholder="Descripción de competencias" ng-model="params.description8">
+		</label>
+		<!-- Semana -->
+		<div class="item item-divider item-dark2">Semana 9</div> 
+		<label class="item item-input item-floating-label item-dark">
+		    <span class="input-label white">Descripcion de etapa</span>
+		    <input type="text" placeholder="Descripcion de etapa" ng-model="params.descriptionProject9">
+		</label>
+		<label class="item item-input item-dark" >
+		    <span class="input-label white">Inicio de semana:</span>
+		    <input type="date" ng-model="semana9.inicio">
+		</label>
+		<label class="item item-input item-dark">
+		    <span class="input-label white">Fin de semana:</span>
+		    <input type="date" ng-model="semana9.fin">
+		</label>
+		<label class="item item-input item-stacked-label item-dark">
+			<span class="input-label white">Horas</span>
+			<form class="item range item-dark noneBorders" action="/action_page.php"
+			  oninput="x.value=parseInt(horas.value)">
+			  <i><output name="x" for="a b"></output></i>
+			  <input type="range"  id="horas" name="horas" min="4" max="40" value="4" ng-model="params.hour9">
+			</form>
+		</label>
+		<label class="item item-input item-floating-label item-dark">
+		    <span class="input-label white">Descripción de competencias</span>
+		    <input type="text" placeholder="Descripción de competencias" ng-model="params.description9">
+		</label>
+		<div class="item item-divider item-dark2"></div> 
+		<label class="item item-input item-floating-label item-dark textarea2">
+		    <span class="input-label white">Actividades de Aprendizaje</span>
+		    <textarea class="item item-dark2 item-text-wrap" maxlength="200" type="text" placeholder="Actividades de Aprendizaje" rows="3" cols="3" ng-model="params.learnActivity"></textarea>
+		</label>
+		<label class="item item-input item-floating-label item-dark textarea2">
+		    <span class="input-label white">Resultados de Aprendizaje</span>
+		    <textarea class="item item-dark2 item-text-wrap" maxlength="200" type="text" placeholder="Resultados de Aprendizaje" rows="3" cols="3" ng-model="params.learnResult"></textarea>
+		</label>
+		<label class="item item-input item-floating-label item-dark textarea2">
+		    <span class="input-label white">Evidencias</span>
+		    <textarea class="item item-dark2 item-text-wrap" maxlength="200" type="text" placeholder="Evidencias" rows="3" cols="3" ng-model="params.evidence"></textarea>
+		</label>
+		<label class="item item-input item-floating-label item-dark textarea2">
+		    <span class="input-label white">Instrumentos de Evaluación</span>
+		    <textarea class="item item-dark2 item-text-wrap" maxlength="200" type="text" placeholder="Instrumentos de Evaluación" rows="3" cols="3" ng-model="params.evaluation"></textarea>
+		</label>
+		<label class="item item-input item-floating-label item-dark textarea2">
+		    <span class="input-label white">Asignaturas</span>
+		    <textarea class="item item-dark2 item-text-wrap" maxlength="200" type="text" placeholder="Asignaturas" rows="3" cols="3" ng-model="params.asigment"></textarea>
+		</label>
+		<label class="item item-input item-floating-label item-dark textarea2">
+		    <span class="input-label white">Tópicos Recomendados </span>
+		    <textarea class="item item-dark2 item-text-wrap" maxlength="200" type="text" placeholder="Tópicos Recomendados " rows="3" cols="3" ng-model="params.topic"></textarea>
+		</label>
+		<label class="item item-input item-floating-label item-dark textarea2">
+		    <span class="input-label white">Estrategias Didácticas</span>
+		    <textarea class="item item-dark2 item-text-wrap" maxlength="200" type="text" placeholder="Estrategias Didácticas" rows="3" cols="3" ng-model="params.didacticStrategies"></textarea>
+		</label>
+		<button class="button button-block icon icon-right ion-edit button-dark" ng-click="getF03()">
+		  Guardar
+		</button>
+	</div>
+</div>
+  </ion-content>
+</ion-view>
